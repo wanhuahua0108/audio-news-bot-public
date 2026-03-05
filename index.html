@@ -38,7 +38,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",s
 </style>
 </head>
 <body>
-<div class="nav"><span>📅 历史日报:</span> <a href="2026-03-05.html?v=1772689531" class="cur">03-05</a> <a href="2026-03-04.html?v=1772689531">03-04</a> <button class="theme-btn" id="themeIcon" onclick="_toggleTheme()">☀️</button></div>
+<div class="nav"><span>📅 历史日报:</span> <a href="2026-03-05.html?v=1772689989" class="cur">03-05</a> <a href="2026-03-04.html?v=1772689989">03-04</a> <button class="theme-btn" id="themeIcon" onclick="_toggleTheme()">☀️</button></div>
 <div class="hd">
 <h1>🎵 每日音频News - 2026-03-05</h1>
 <p class="st">📋 今日共 60 条 | 🆓 限免 10 条</p>
@@ -119,6 +119,8 @@ window.onscroll=function(){b.style.display=window.scrollY>300?'flex':'none'};
   var saved=localStorage.getItem('theme');
   if(saved)html.setAttribute('data-theme',saved);
   else if(window.matchMedia('(prefers-color-scheme:dark)').matches)html.setAttribute('data-theme','dark');
+  var icon=document.getElementById('themeIcon');
+  if(icon)icon.textContent=(html.getAttribute('data-theme')==='dark')?'\ud83c\udf19':'\u2600\ufe0f';
   window._toggleTheme=function(){
     var cur=html.getAttribute('data-theme');
     var next=cur==='dark'?'light':'dark';
